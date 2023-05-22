@@ -2,8 +2,10 @@ package com.example.demo.Controller;
 
 import com.example.demo.Model.Article;
 import com.example.demo.Request.ArticleRequest;
+import com.example.demo.Request.ArticleUpdateRequest;
 import com.example.demo.Service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.text.ParseException;
@@ -77,5 +79,20 @@ public class ArticleController {
         articleService.deleteArticleById(id);
         return "Record Deleted Successfully :)";
     }
+    @RequestMapping (value = "articleId",method=RequestMethod.GET)
+    public ResponseEntity<Article> updateArticle(@PathVariable Integer articleId, @RequestBody ArticleUpdateRequest updateRequest)throws ParseException{
+        Article existingArticle = articleService.getArticleById1(articleId);
+        if (existingArticle == null) {
+            return ResponseEntity.notFound().build();
+        }
+        // Update the properties of the existing article with the values from the update request
+        existingArticle.setTitle(updateRequest.getTitle());
+        existingArticle.setContent(updateRequest.getContent());
+        existingArticle.setAuthor(updateRequest.getAuthor());
+        existingArticle.setPublishDate(updateRequest.getPublishDate());
 
+        // Save the updated article using the ArticleService
+        Article updatedArticle = articleService.updateArticle(existingArticle);
+        return ResponseEntity.ok(updatedArticle);
+    }
 }

@@ -26,5 +26,5 @@ public class Schedule {
             articleRepositry.save(article);
         }
     }
-    
+
 }

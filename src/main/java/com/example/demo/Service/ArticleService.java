@@ -57,5 +57,11 @@ public class ArticleService {
         Article articleToDelete =articleRepositry.findById(Id).get();
         articleRepositry.delete(articleToDelete);
     }
+    public  Article getArticleById1(Integer articleId) {
+        return articleRepositry.findById(articleId).orElse(null);
+    }
 
+    public Article updateArticle(Article existingArticle) {
+        return articleRepositry.save(existingArticle);
+    }
 }
