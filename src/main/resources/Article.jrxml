@@ -14,7 +14,7 @@
 
     </field>
     <group name="Group1">
-        <groupExpression><![CDATA[$F{ORDERID}]]></groupExpression>
+        <groupExpression><![CDATA[$F{title}]]></groupExpression>
         <groupHeader>
             <band height="33">
                 <staticText>
@@ -29,7 +29,7 @@
                     <textElement>
                         <font size="24" isBold="true"/>
                     </textElement>
-                    <textFieldExpression><![CDATA[$F{ORDERID}]]></textFieldExpression>
+                    <textFieldExpression><![CDATA[$F{title}]]></textFieldExpression>
                 </textField>
                 <line>
                     <reportElement x="-20" y="32" width="595" height="1" forecolor="#666666" uuid="0c0a4077-bfec-4eef-97ab-58aaae478c39"/>
@@ -41,7 +41,7 @@
         </groupFooter>
     </group>
     <group name="Group2">
-        <groupExpression><![CDATA[$F{EMPLOYEEID}]]></groupExpression>
+        <groupExpression><![CDATA[$F{content}]]></groupExpression>
         <groupHeader>
             <band height="32">
                 <textField>
@@ -49,7 +49,7 @@
                     <textElement>
                         <font size="22" isBold="true"/>
                     </textElement>
-                    <textFieldExpression><![CDATA[$F{EMPLOYEEID}]]></textFieldExpression>
+                    <textFieldExpression><![CDATA[$F{content}]]></textFieldExpression>
                 </textField>
                 <staticText>
                     <reportElement x="0" y="0" width="100" height="20" forecolor="#DB1B18" uuid="984f8c57-7dc3-4ccb-8733-fdd22bfe464f"/>
@@ -65,7 +65,7 @@
         </groupFooter>
     </group>
     <group name="Group3">
-        <groupExpression><![CDATA[$F{SHIPPEDDATE}]]></groupExpression>
+        <groupExpression><![CDATA[$F{author}]]></groupExpression>
         <groupHeader>
             <band height="32">
                 <textField>
@@ -73,7 +73,7 @@
                     <textElement>
                         <font size="20" isBold="true"/>
                     </textElement>
-                    <textFieldExpression><![CDATA[$F{SHIPPEDDATE}]]></textFieldExpression>
+                    <textFieldExpression><![CDATA[$F{author}]]></textFieldExpression>
                 </textField>
                 <staticText>
                     <reportElement x="0" y="0" width="100" height="20" forecolor="#E02E2B" uuid="401a0dfc-b041-496e-a350-baaefff3d9d7"/>
@@ -89,7 +89,7 @@
         </groupFooter>
     </group>
     <group name="Group4">
-        <groupExpression><![CDATA[$F{ORDERDATE}]]></groupExpression>
+        <groupExpression><![CDATA[$F{publishDate}]]></groupExpression>
         <groupHeader>
             <band height="32">
                 <textField>
@@ -97,7 +97,7 @@
                     <textElement>
                         <font size="16" isBold="true"/>
                     </textElement>
-                    <textFieldExpression><![CDATA[$F{ORDERDATE}]]></textFieldExpression>
+                    <textFieldExpression><![CDATA[$F{publishDate}]]></textFieldExpression>
                 </textField>
                 <staticText>
                     <reportElement x="0" y="0" width="100" height="20" forecolor="#E61D19" uuid="07270eb4-2863-4c93-9c74-d4c187891b65"/>

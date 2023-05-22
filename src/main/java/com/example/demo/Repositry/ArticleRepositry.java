@@ -28,5 +28,8 @@ public interface ArticleRepositry extends JpaRepository<Article, Integer> {
     List<Article> getAllInActiveArticle();
     @Query(value ="SELECT s from Article s where s.publishDate = :publishDate")
     List<Article> getArticleUpdatedDate(@Param("publishDate") Date publishDate);
-
+//
+//    //   @Query(value = "SELECT s from Article s WHERE s.id = :id")
+//    Iterable<Article> deleteArticleById(@Param("id")Integer id);
+//
 }

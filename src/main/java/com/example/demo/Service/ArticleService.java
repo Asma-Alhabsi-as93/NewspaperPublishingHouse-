@@ -53,4 +53,9 @@ public class ArticleService {
         return articles;
     }
 
+    public void deleteArticleById(Integer Id) {
+        Article articleToDelete =articleRepositry.findById(Id).get();
+        articleRepositry.delete(articleToDelete);
+    }
+
 }

@@ -20,7 +20,7 @@ import java.util.Map;
 public class ReportService {
 @Autowired
     ArticleRepositry articleRepositry;
-    public static final String pathToReports ="C:\\NewspaperPublishingHouse--main";
+    public static final String pathToReports ="C:\\Users\\User004\\Desktop\\newsepaperReport";
     public String generateReport() throws FileNotFoundException, JRException {
         List<Article> articleList = articleRepositry.getAllArticle();
         List<ArticleDTO> articleReportDTOS = new ArrayList<>();

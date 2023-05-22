@@ -71,4 +71,11 @@ public class ArticleController {
         return articles;
     }
 
+    @GetMapping(value = "deleteById")
+    public String deleteArticleById(@RequestParam Integer id) {
+
+        articleService.deleteArticleById(id);
+        return "Record Deleted Successfully :)";
+    }
+
 }
