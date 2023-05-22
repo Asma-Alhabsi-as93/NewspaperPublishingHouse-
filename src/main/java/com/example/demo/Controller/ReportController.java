@@ -15,4 +15,5 @@ public class ReportController {
     public void ArticleDTO() throws Exception {
         reportService.generateReport();
     }
+    ;l;fdkjijgifgit
 }
